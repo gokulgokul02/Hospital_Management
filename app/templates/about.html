@@ -1,0 +1,119 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<style>
+  body {
+    background: #f9fff9;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .about {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #2e8b57;
+    margin: 8px auto 0;
+    border-radius: 2px;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .about ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+  .about ul li {
+    background: #eaffea;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s;
+  }
+
+  .about ul li:hover {
+    transform: translateY(-5px);
+    background: #c2f0c2;
+  }
+
+  /* Extra Features Section */
+  .about-extra {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f0fff0;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .about-extra h3 {
+    color: #2e8b57;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .about-extra p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<section class="about">
+  <h2>About Our Service</h2>
+  <p>
+    Our hospital appointment system offers a seamless experience for patients to connect with healthcare professionals.
+    We ensure **fast, secure, and hassle-free bookings** with a user-friendly interface and advanced features.
+  </p>
+  <ul>
+    <li>✔ **Emergency booking for critical cases** with priority scheduling.</li>
+    <li>✔ Access your **medical records and history** anytime, anywhere.</li>
+    <li>✔ **Real-time doctor availability** and appointment slots.</li>
+    <li>✔ **AI-powered health recommendations** and reminders.</li>
+    <li>✔ **Secure online payments** with instant confirmation.</li>
+    <li>✔ **24/7 support** for emergencies and online consultations.</li>
+  </ul>
+
+  <div class="about-extra">
+    <h3>Our Mission</h3>
+    <p>
+      We aim to simplify healthcare by bridging the gap between doctors and patients.  
+      Our platform ensures that **quality healthcare is just a click away**.
+    </p>
+  </div>
+</section>
+{% endblock %}

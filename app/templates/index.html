@@ -1,0 +1,175 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome - Online Hospital Appointment</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f8fdf8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(46,139,87,0.8), rgba(60,179,113,0.8)),
+                  url('https://images.unsplash.com/photo-1580281657521-5403c994e2d6?fit=crop&w=1350&q=80') center/cover no-repeat;
+      height: 90vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-content span {
+      color: #aaffaa;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px auto 20px;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      background: #aaffaa;
+      color: #2e8b57;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: white;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 50px 20px;
+      background: #f0fff0;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #2e8b57;
+    }
+
+    .feature-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .feature-box h3 {
+      color: #2e8b57;
+      margin-bottom: 10px;
+    }
+
+    /* About Section */
+    .about {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    .about ul {
+      list-style: disc;
+      padding-left: 20px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to <span>MediCare+</span></h1>
+      <p>We provide an <strong>easy and secure</strong> way to book online appointments with top doctors and specialists at your convenience.</p>
+      <a href="{% url 'book' %}" class="btn-primary">Book Now</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-container">
+      <div class="feature-box">
+        <h3>24/7 Online Booking</h3>
+        <p>Book appointments anytime, anywhere – no waiting in long queues.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Specialist Doctors</h3>
+        <p>Connect with top-rated doctors across multiple departments.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Instant Confirmation</h3>
+        <p>Get real-time booking confirmation with SMS and email alerts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Our Service</h2>
+    <p>Our hospital appointment system allows patients to find doctors, check their availability, and book appointments online. With a seamless interface, patients can schedule visits, consult online, or request emergency services – all in just a few clicks.</p>
+    <ul>
+      <li>Emergency booking for critical cases</li>
+      <li>Access to patient history and medical records</li>
+      <li>Online payments and appointment tracking</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 VR HOSPITAL. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+{% endblock %}
